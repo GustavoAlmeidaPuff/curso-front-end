@@ -1,0 +1,112 @@
+<!-- Campo de Senha com Validação: Crie um formulário de registro
+com campos para senha e confirmação de senha. Adicione uma
+mensagem de validação para garantir que as senhas coin -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM SENHA</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #2d2d44;
+            margin: 0;
+            color: #fff;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container{
+            background-color: #1e1e2c;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px #000 ;
+        }
+
+        .form-group{
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input[type="password"],
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 2px solid #383846;
+        }
+
+        .form-group input[type="password"]:hover{
+            border: 2px solid #33e1ed;
+            transition: 0.3s;
+        }
+
+        .form-group input[type="submit"]{
+            background-color: #33e1ed;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: large;
+            
+        }
+
+        .error-message {
+            color: #ff0000; /* Vermelho */
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #fff;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="form-container">
+        <h2>Formulario de Registro</h2>
+        <form id="register-form">
+            <!-- campos de senha e confirmaação -->
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirmação de Senha:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <span class="error-message" id="password-error"></span><br>
+                <input type="submit" value="Registrar">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('register-form');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm-password');
+        const passwordError = document.getElementById('password-error');
+      
+        form.addEventListener('submit', function(event) {
+          if (passwordInput.value !== confirmPasswordInput.value) {
+            passwordError.textContent = 'As senhas não coincidem.' ;
+            event.preventDefault();
+          } else {
+            passwordError.textContent = '';
+          }
+        });
+      </script>
+</body>
+</html>
