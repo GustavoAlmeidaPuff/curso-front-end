@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dark Mode Switch</title>
+  <style>
+    /* Estilos para o botão switch */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #000; /* Mudando para preto no modo escuro */
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    /* Estilos para o corpo da página nos modos claro e escuro */
+    body {
+      transition: background-color 0.4s ease;
+    }
+
+    [data-theme="light"] {
+      background-color: #ffffff; /* Cor de fundo no modo claro */
+      color: #000000; /* Cor do texto no modo claro */
+    }
+
+    [data-theme="dark"] {
+      background-color: #1f1f1f; /* Cor de fundo no modo escuro */
+      color: #ffffff; /* Cor do texto no modo escuro */
+    }
+  </style>
+</head>
+<body>
+  <label class="switch">
+    <input type="checkbox" id="darkModeToggle">
+    <span class="slider round"></span>
+  </label>
+
+  <script>
+    const toggleSwitch = document.getElementById('darkModeToggle');
+
+    toggleSwitch.addEventListener('change', () => {
+      if (toggleSwitch.checked) {
+        document.body.setAttribute('data-theme', 'dark');
+        // Salvar a preferência do usuário (pode ser feito com localStorage)
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Verifica a preferência do usuário ao carregar a página
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+      document.body.setAttribute('data-theme', currentTheme);
+    } else {
+      const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (prefersDarkScheme.matches) {
+        document.body.setAttribute('data-theme', 'dark');
+        toggleSwitch.checked = true;
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+  </script>
+</body>
+</html>

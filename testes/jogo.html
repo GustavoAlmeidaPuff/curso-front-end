@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Treino de Mira</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    #gameContainer {
+      text-align: center;
+    }
+    #gameArea {
+      width: 500px;
+      height: 500px;
+      background-color: #f0f0f0;
+      position: relative;
+      cursor: crosshair;
+      margin: 0 auto; /* Centraliza horizontalmente */
+    }
+    .target {
+      width: 30px;
+      height: 30px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div id="gameContainer">
+    <h1>Treino de Mira</h1>
+    <p>Pontuação: <span id="score">0</span></p>
+    <div id="gameArea"></div>
+  </div>
+
+  <script>
+    let score = 0;
+
+    function createTarget() {
+      const target = document.createElement('div');
+      target.classList.add('target');
+      const x = Math.random() * 470; // Ajuste para manter o alvo dentro da área do jogo
+      const y = Math.random() * 470; // Ajuste para manter o alvo dentro da área do jogo
+      target.style.left = `${x}px`;
+      target.style.top = `${y}px`;
+      target.addEventListener('click', hitTarget);
+      document.getElementById('gameArea').appendChild(target);
+    }
+
+    function hitTarget(event) {
+      event.target.remove();
+      score++;
+      document.getElementById('score').innerText = score;
+    }
+
+    setInterval(createTarget, 100); // Cria um novo alvo a cada segundo
+  </script>
+</body>
+</html>
