@@ -35,7 +35,7 @@ function addTask(){
 
         for (var i = 0; i < tasks.length; i++) {
             var checkbox = tasks[i].querySelector("input[type='checkbox']")
-            if (checkbox.checked){
+            if (checkbox.checked) {
                 taskList.removeChild (tasks[i])
             }
         }
