@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de tarefas</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- conteúdo -->
-    <div class="container">
-        <h1>Lista de Tarefas</h1>
-        <div class="input-section">
-            <input type="text" id="taskInput" placeholder="Adicione uma nova tarefa">
-            <button onclick="addTask()">Adicionar</button>
-            <button onclick="deleteSelectedTasks()">Excluir selecionadas</button>
-        </div>
 
-        <div id="taskList">
-            <!-- Aqui as tarefas serão adicionadas dinamicamente -->
-        </div>
-    </div>
-    <script src="script.js"></script>
+<div class="container">
+  <h1>Lista de Tarefas</h1>
+  <div class="input-section">
+    <input type="text" id="taskInput" placeholder="Adicione uma nova tarefa">
+    <button onclick="addTask()">Adicionar</button>
+    <button onclick="deleteSelectedTasks()">Excluir selecionadas</button>
+  </div>
+
+  <div id="taskList">
+    <!-- Aqui as tarefas serão adicionadas dinamicamente -->
+  </div>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>

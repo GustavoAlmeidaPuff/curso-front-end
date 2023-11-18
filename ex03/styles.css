@@ -1,47 +1,65 @@
-/* definiçoes de estilo para a pagina */
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-}
-
-/* definiçoes para a lista de tarefas */
-
-/* estilos para a area de container */
-.container{
-    max-width: 600px; /*define a largura máxima do container*/
-    margin: 20px auto; /*margem extra com alinhamento automático*/
-    background-color: #fff; /*cor de fundo do container*/
-    padding: 20px; /*espaçamento interno do container*/
-    border-radius: 5px; /*borda arredondada*/
-    box-shadow: 0 0 10px;
-}
-
-/* estilos para o título */
-h1 {
-    text-align: center; /*alinhamento do texto ao centro*/
-    margin-bottom: 20px; /*espaço inferior*/
-}
-
-/* estilos para a seção de entrada */
-.input-section {
-    display: flex; /*utiliza o modelo fexivel para ogranzação*/
-    gap: 10px; /*espaçamento entre os elementos*/
-    margin-bottom: 20px; /*espaço inferior*/
-}
-
-input[type="text"] {
-    padding: 8px;/*espaçamento interno do campo*/
-    width: 70%; /*largura do campo*/
-    border-radius: 3px; /*borda arredondada*/
-    border: 1px solid #ccc; /*borda com cor e expessura*/
-}
-
-/* estilos para os botões */
-button {
-    padding: 8px 15px; /*espaçaento interno do botão*/
-    border: none; /*remove a borda padrão*/
-    border-radius: 3px; /*arredonda a borda*/
-    background-color: #007bff; /*cor de fundo do botão*/
-}
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 8px;
+    width: 70%;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .task-item {
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .task-item label {
+    margin-left: 5px;
+  }
+  
+  .task-item input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
