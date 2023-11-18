@@ -1,0 +1,103 @@
+/* Reset para remover margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos básicos para o body */
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  /* Estilos para os perfis */
+  .profiles {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Estilos para o cartão de perfil */
+  .profile-card {
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Efeito hover no cartão */
+  .profile-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Estilos para o avatar */
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    background-image: url('images/quati.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    border: 2px solid white; /* Adicione uma borda para destaque */
+    transition: transform 0.3s ease;
+  }
+
+  .profile-card:nth-child(2) .avatar {
+    background-image: url('images/amore.png');
+  }
+
+  .profile-card:nth-child(3) .avatar {
+    background-image: url('images/tuezin.png');
+  }
+
+  .profile-card:nth-child(4) .avatar {
+    background-image: url('images/eu.png');
+  }
+
+
+  .details h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333; /* Alterando a cor do nome para ser mais visível */
+  }
+  
+  .details p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px; /* Adicionando um espaçamento entre os detalhes */
+  }
+  
+  /* Efeito hover no avatar */
+  .profile-card:hover .avatar {
+    transform: scale(1.1);
+  }
+  
+  
+  /* Estilos para os detalhes do perfil */
+  .details h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+  }
+  
+  .details p {
+    font-size: 14px;
+    color: #888;
+    transition: color 0.3s ease;
+  }
+  
+  /* Efeito hover nos detalhes */
+  .profile-card:hover .details h2,
+  .profile-card:hover .details p {
+    color: #333;
+  }
+  
