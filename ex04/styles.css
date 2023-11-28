@@ -1,0 +1,48 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.gender-form {
+    max-width: 400px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.radio-group {
+    margin-bottom: 15px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    transition: background-color 0.3 ease;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #3498db;
+    color: #ffffffff;
+    border-color: #3498db;
+}
+
+input[type="radio"]:hover + label {
+    background-color: #f0f0f0;
+    color: #000000;
+}
