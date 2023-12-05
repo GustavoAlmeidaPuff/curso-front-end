@@ -1,0 +1,7 @@
+/* estilos do dropdown */
+.dropdown select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
