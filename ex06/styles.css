@@ -1,0 +1,54 @@
+/* define a fonte e a cor de fundo para o corpo do site */
+body {
+    font-family: Arial, sans-serif; 
+    background-color: #f4f4f4; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* estiliza o container do formulário de login */
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px;
+    text-align: center;
+}
+
+/* estiliza o container dos campos de entrada */
+.input-container {
+    margin-bottom: 15px;
+    margin-right: 12%;
+}
+
+/* Estiliza os campos de entrada (usuário e senha) */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3 ease;
+}
+
+/* estiliza os campos de entrada quando o mouse passar por cima */
+.input-field:hover,
+.login-btn:hover {
+    border-color: #3498db;
+}
+
+/* estiliza p botão de login */
+.login-btn {
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #2980b9;
+}
