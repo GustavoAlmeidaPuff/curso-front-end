@@ -1,0 +1,62 @@
+body {
+    font-family: arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.advanced-search-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+select,
+button {
+    width: calc(100% - 16px); /* Define a largura dos campos de entrada, considerando 16 pixels de espaço para a borda e o preenchimento */
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto; /* Define a largura automaticamente para checkboxes e radio buttons */
+    margin-right: 5px; /* Adiciona um espaçamento à direita entre os checkboxes e radio buttons */
+    margin-top: 0; /* Remove o espaçamento superior */
+    margin-bottom: 0; /* Remove o espaçamento inferior */
+    vertical-align: middle; /* Alinha verticalmente os checkboxes e radio buttons */
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
