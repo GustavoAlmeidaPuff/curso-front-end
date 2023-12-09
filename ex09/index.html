@@ -1,16 +1,28 @@
-<!-- Formulário de Feedback com Estrelas: Crie um formulário de
-feedback com um sistema de classificação por estrelas. Use
-HTML e CSS para criar estrelas que podem ser clicadas para dar
-uma classificação ao produto ou serviço. -->
+<!-- decidi fazer esse codigo em pt... pq? não sei -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>09</title>
+	<meta charset="utf-8"/>
+	<title>09</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <form class="formulario-de-feedback">
+        <h2>Avalie-nos:</h2>
+        <ul class="avaliacao">
+            <li class="star-icon ativo" data-avaliacao="1"></li>
+            <li class="star-icon" data-avaliacao="2"></li>
+            <li class="star-icon" data-avaliacao="3"></li>
+            <li class="star-icon" data-avaliacao="4"></li>
+            <li class="star-icon" data-avaliacao="5"></li>
+        </ul>
+        <div class="conteiner-da-mensagem">
+            <label for="mensagem">Avaliação por escrito (opcional):</label><br>
+            <textarea name="mensagem" id="mensagem" cols="30" rows="3" placeholder="Deixe sua Avaliação por escrito"></textarea>
+        </div>
+        <button id="botao-de-enviar" type="submit" >Enviar</button>
+    </form>
+<script src="script.js"></script>
 </body>
 </html>
