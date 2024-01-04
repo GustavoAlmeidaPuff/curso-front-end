@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main { margin: 0 5% }
+
+/* Cabeçalho da página */
+header {
+    background-color: black;
+    color: whitesmoke;
+    padding: 30px 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Menu de navegação */
+nav {
+    margin-top: 30px;
+}
+
+.menu-item { font-size: 13px; list-style: none; }
+.menu-link { color: white; text-decoration: none; }
+.menu-link:hover { color: gray }
+
+#menu { 
+    display: flex; 
+    justify-content: space-evenly;
+}
+
+/* Galeria */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.book-item img {
+    height: 250px;
+    max-width: 150px;
+    margin: auto;
+}
+
+button { 
+    background-color: darkred;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer; 
+    font-weight: bold;
+    padding: 5px 15px;
+    height: 20px;
+    width: 120px;
+    box-sizing: unset;
+    margin: 0 auto;
+}
+
+button:hover { 
+    border: 2px solid black;
+    height: 16px;
+    transition: .3s;
+    width: 116px;
+}
+
+.book-item { 
+    margin-bottom: 35px;
+    width: 200px; 
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.book-title { font-weight: bold; text-transform: uppercase; }
+.book-title, .book-price { display: block; margin: 5px 0; }
+
+/* Rodapé */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 11px;
+}
+footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}

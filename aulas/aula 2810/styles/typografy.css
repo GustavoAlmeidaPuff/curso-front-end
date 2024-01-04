@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;600&display=swap');
 
-h1, h2 {
-    font-family: 'Roboto Slab', serif;
-}
+h1, h2 { font-family: 'Roboto Slab', serif; }
 
 h1 {
     font-weight: 600;
@@ -12,9 +10,14 @@ h1 {
 h2 {
     font-weight: 200;
     font-size: 14px;
+    margin: 15px 0 50px 0;
+}
+
+h3 {
+    font-size: 27px;
+    margin: 10px 0 30px 0;
 }
 
 * {
-    font-family: georgia, "Sans serif", Times;
-    
+    font-family: Georgia, "Sans serif", Times;
 }

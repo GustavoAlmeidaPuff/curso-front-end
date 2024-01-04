@@ -1,87 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aula 28/10: livraria dos pampas</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/typografy.css">
-    <link rel="icon" type="image/x-icon" href="images/book.png">
-</head>
-<body>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Livraria dos Pampas</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="images/books.png"/>
+        <link rel="stylesheet" href="styles/general.css"/>
+        <link rel="stylesheet" href="styles/typografy.css"/>
+    </head>
+    <body>
+        <header id="top">
+            <h1>Livraria dos Pampas</h1>
+            <h2>Livros diretamente da serra gaúcha! Todas as épocas em um só lugar.</h2>
 
-    <header>
-        <h1>Livraria dos Pampas</h1>
-        <h2>Livros diretamente da serra gaúcha! Todas as épocas em um só lugar</h2>
-        
-        <nav>
-            <ul id="menu">
-                <li class="menu-item"><a class="menu-link" href="">Início</a></li>
-                <li class="menu-item"><a class="menu-link" href="">Poesia</a></li>
-                <li class="menu-item"><a class="menu-link" href="">Novelas</a></li>
-                <li class="menu-item"><a class="menu-link" href="">Policial</a></li>
-                <li class="menu-item"><a class="menu-link" href="">Quadrinhos</a></li>
-                <li class="menu-item"><a class="menu-link" href="">Não-ficção</a></li>
-            </ul>
-        </nav>
-    </header>
+            <nav>
+                <ul id="menu">
+                    <li class="menu-item"><a class="menu-link" href="#top">Início</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#poesia">Poesia</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#novela">Novelas</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#policial">Policial</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">Quadrinhos</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">Não-ficção</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <section id="galeria">
-            <article class="book-item">
-                <img src="images/books/Perseguição e cerco juvenico Guitierres.jpeg" alt="Perseguição e cerco juvenico Guitierres" title="Perseguição e cerco juvenico Guitierres">
-                <span class="book-title">Perseguição e cerco juvenico Guitierres</span>
-                <span class="book-price">R$30</span>
-                <button>Comprar</button>
-            </article>
-            <article class="book-item">
-                <img src="images/books/O tempo e o vento.jpeg" alt="O tempo e o vento" title="O tempo e o vento">
-                <span class="book-title">O tempo e o vento</span>
-                <span class="book-price">R$60</span>
-                <button>Comprar</button>
-            </article>
-            <article class="book-item">
-                <img src="images/books/Hamlet dos pampas.jpeg" alt="Hamlet dos pampas" title="Hamlet dos pampas">
-                <span class="book-title">Hamlet dos pampas</span>
-                <span class="book-price">R$15</span>
-                <button>Comprar</button>
-            </article>
-            <article class="book-item">
-                <img src="images/books/Manual para entender porque o guaíba é lago.jpeg" alt="Manual para entender porque o guaíba é lago" title="Manual para entender porque o guaíba é lago">
-                <span class="book-title">Manual para entender porque o guaíba é lago</span>
-                <span class="book-price">R$40</span>
-                <button>Comprar</button>
-            </article>
-            <article class="book-item">
-                <img src="images/books/Ana terra.jpeg" alt="Ana terra" title="Ana terra">
-                <span class="book-title">Ana terra</span>
-                <span class="book-price">R$20</span>
-                <button>Comprar</button>
-            </article>
-            <article class="book-item">
-                <img src="images/books/O filho do dilúvio.jpeg" alt="O filho do dilúvio" title="O filho do dilúvio">
-                <span class="book-title">O filho do dilúvio</span>
-                <span class="book-price">R$30</span>
-                <button>Comprar</button>
-            </article>
-            <article class="book-item">
-                <img src="images/books/O barão de Mauá.jpeg" alt="O barão de Mauá" title="O barão de Mauá">
-                <span class="book-title">O barão de Mauá</span>
-                <span class="book-price">R$35</span>
-                <button>Comprar</button>
-            </article>
-            <article class="book-item">
-                <img src="images/books/Dias perfeitos.jpeg" alt="Dias perfeitos" title="Dias perfeitos">
-                <span class="book-title">Dias perfeitos</span>
-                <span class="book-price">R$50</span>
-                <button>Comprar</button>
-            </article>
-        </section>
-    </main>
+        <main>
+            <section id="poesia">
+                <h3>Poesia</h3>
+                <div class="galeria">
+                    <article class="book-item">
+                        <img src="images/books/defunto.jpg" alt="Velório sem defunto" title="Velório sem defunto"/>
+                        <span class="book-title">Velório sem defunto</span>
+                        <span class="book-price">R$ 10</span>
+                        <button>Comprar</button>
+                    </article>
+                    <article class="book-item">
+                        <img src="images/books/martin-fierro.jpg" alt="Martin Fierro" title="Martin Fierro"/>
+                        <span class="book-title">Martin Fierro</span>
+                        <span class="book-price">R$ 10</span>
+                        <button>Comprar</button>
+                    </article>
+                    <article class="book-item">
+                        <img src="images/books/mugido.jpg" alt="Mugido" title="Mugido"/>
+                        <span class="book-title">Mugido</span>
+                        <span class="book-price">R$ 10</span>
+                        <button>Comprar</button>
+                    </article>
+                    <article class="book-item">
+                        <img src="images/books/jayme.jpeg" alt="De fogão em dogão" title="De fogão em dogão"/>
+                        <span class="book-title">De fogão em dogão</span>
+                        <span class="book-price">R$ 10</span>
+                        <button>Comprar</button>
+                    </article>
+                </div>
+            </section>
+            <section id="novela">
+                <h3>Novelas</h3>
+                <div class="galeria">
+                    <article class="book-item">
+                        <img src="images/books/tabajara-ruas.jpg" alt="Perseguição e cerco a Juvêncio Gutierrez" title="Perseguição e cerco a Juvêncio Gutierrez"/>
+                        <span class="book-title">Perseguição e cerco a Juvêncio Gutierrez</span>
+                        <span class="book-price">R$ 30</span>
+                        <button>Comprar</button>
+                    </article>
+                    <article class="book-item">
+                        <img src="images/books/o-tempo-e-o-vento.jpg" alt="O tempo e o vento" title="O tempo e o vento"/>
+                        <span class="book-title">O tempo e o vento</span>
+                        <span class="book-price">R$ 60</span>
+                        <button>Comprar</button>
+                    </article>
+                    <article class="book-item">
+                        <img src="images/books/hamlet.jpg" alt="Hamlet dos pampas" title="Hamlet dos pampas"/>
+                        <span class="book-title">Hamlet dos pampas</span>
+                        <span class="book-price">R$ 15</span>
+                        <button>Comprar</button>
+                    </article>
+                    <article class="book-item">
+                        <img src="images/books/guaiba.jpg" alt="Manual para entender porque o Guaíba é um lago" title="Manual para entender porque o Guaíba é um lago"/>
+                        <span class="book-title">Manual para entender porque o Guaíba é um lago</span>
+                        <span class="book-price">R$ 40</span>
+                        <button>Comprar</button>
+                    </article>
+                    <article class="book-item">
+                        <img src="images/books/ana-terra.jpg" alt="Ana Terra" title="Ana Terra"/>
+                        <span class="book-title">Ana Terra</span>
+                        <span class="book-price">R$ 20</span>
+                        <button>Comprar</button>
+                    </article>
+                    <article class="book-item">
+                        <img src="images/books/a-filha-do-diluvio.jpeg" alt="A filha do Dilúvio" title="A filha do Dilúvio"/>
+                        <span class="book-title">A filha do Dilúvio</span>
+                        <span class="book-price">R$ 30</span>
+                        <button>Comprar</button>
+                    </article>
+                    <article class="book-item">
+                        <img src="images/books/barao-de-maua.jpg" alt="O Barão de Mauá" title="O Barão de Mauá"/>
+                        <span class="book-title">O Barão de Mauá</span>
+                        <span class="book-price">R$ 35</span>
+                        <button>Comprar</button>
+                    </article>
+                    <article class="book-item">
+                        <img src="images/books/dias-perfeitos.jpg" alt="Dias perfeitos" title="Dias perfeitos"/>
+                        <span class="book-title">Dias perfeitos</span>
+                        <span class="book-price">R$ 50</span>
+                        <button>Comprar</button>
+                    </article>
+                </div>
+            </section>
+            <section id="policial">
+                <h3>Policial</h3>
+            </section>
+        </main>
 
-    <footer>
-        &copy; 2023 LIVRARIA DOS PAMPAS <a href="https://www.institutoevoluir.info/">Instituto Evoluir</a>
-    </footer>
-
-</body>
+        <footer>
+            &copy; 2023 LIVRARIA DOS PAMPAS by <a href="https://www.institutoevoluir.info/">Instituto Evoluir</a>.
+        </footer>
+    </body>
 </html>
