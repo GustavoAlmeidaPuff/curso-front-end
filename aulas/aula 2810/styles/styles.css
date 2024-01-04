@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* cabeçalho da página */
+header {
+    background-color: darkred;
+    text-align: center;
+    width: 100%;
+}
+
+.book-item img {
+    max-height: 250px;
+    max-width: 180px;
+}
