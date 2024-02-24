@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> SIDEBAR | NK</title>
+        <style>
+            /*criando as cores do cabeçalho/page sem repetiçao*/
+            :root {
+                --color-white: #fff;
+                --color-dark1: #272727;
+                --color-dark2: #302f2f;
+                --color-dark3: #353535;
+                --color-dark4: #101010;
+                --color-dark5: #202020;
+                --color-purple:#A020F0;
+                --color-red: #ec1404;
+                --color-purple2: #3c0a58;
+            }
+            
+            /*extraindo os espaçamentos automaticos*/
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            
+            /*estlizando a cor da pagina com variaveis*/
+            body { 
+             font-family: Arial, Helvetica, sans-serif;
+             background-color: var(--color-dark1);
+             color: var(--color-white);
+            }
+          
+            /*formatando a imagem*/
+            img {
+                width: 45px;
+             }
+            
+             /*organizando as opcoes e a imagem do cabeçalho com flexbox*/
+            .header, .navigation {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+              }
+ 
+            /* estilizando o cabeçalho para nao ficar nada nas pontas nem muito no meio*/
+            .header {
+              background-color: var(--color-dark2); 
+              box-shadow: 1px 1px 4px var(--color-dark4); 
+              height: 56px;
+              justify-content: space-between;
+              padding: 0 10%;
+                 }
+   
+            /*espaçamento entre os elementos das flexbox*/
+               .navigation {
+                gap: 3em;
+                z-index: 2;
+                 }
+
+            /*estilizando os links de navegaçao*/
+               .navigation a{
+                text-decoration: none;
+                color: var(--color-purple);
+                /*transformar em negrito*/
+                font-weight: bold;
+                 }
+
+               .navigation a:hover {
+                /*fazer o passar do mouse piscar 1s*/
+                transition: 1s;
+                cursor: pointer;
+                color: var(--color-white);
+
+                 }
+  
+               /*estilizando as opçoes*/
+               .ativo {
+                background-color: var(--color-dark3);
+                padding: 10px;
+                border-radius: 5px;
+                 }
+          
+                /*estilizando o centro*/
+                  #content, form{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    
+                }
+          
+                 .legend{
+                    display: none;
+                 }
+
+                 .inputs { 
+                  padding: 8px 5px;
+                  outline: none;
+                  border-radius: 5px;
+                  background-color: var(--color-dark4);
+                  border: 3px solid var(--color-dark4);
+                  color: var(--color-purple);
+                  width: 100%;
+                  box-sizing: border-box;
+                  transition: .3s;
+                 }
+
+                 .inputs:focus{
+                    border-color: var(--color-purple2);
+                 }
+
+                 .box{
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: bold;
+                    gap: 1rem;
+                 }
+
+                 button[type="submit"]{
+                    padding: 1rem;
+                    font-size: 1rem;
+                    outline: none;
+                    border: none;
+                    border-radius: 5px;
+                    margin-top: 1rem;
+                    background-color: var(--color-purple2);
+                    color: var(--color-white);
+                    cursor: pointer;
+                 }
+
+                 button:hover{
+                    background-color: var(--color-purple);
+                    border: 4px var(--color-purple2);
+                    transition: 1s;
+                    color: #101010;
+                 }
+
+                 @media screen and (max-width: 576px){
+                    .box{
+                        flex-direction:column ;
+                        gap: 5px;
+                    }
+                    
+                 }
+
+                 #content{
+                 border-radius: 30px;
+                background: var(--color-dark5);
+                padding: 32px;
+                min-width: 30%;
+                overflow: auto;
+                max-height: 500px;
+
+              }
+                
+
+               .content{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #101010;
+                
+                
+                 }
+
+                h1{
+                    margin-bottom: 1rem;
+                    text-align: center;
+                    color:var(--color-purple);
+                    text-decoration: overline underline;
+                     }
+
+                 /*estilizando os icones*/
+                 .btn_icon_header{ 
+                    /* display faz com que nao apareça de cara*/
+                   display: none;
+                   background-color: transparent;
+                    border: none;
+                    color: var(--color-white);
+                    cursor: pointer;
+                }
+
+                 /*fazendo com que os icones apareçam quando a tela diminuir*/
+                 @media screen and (max-width:768px){
+                   .btn_icon_header{
+                        display: block;
+                    }
+                    /*fazendo as opçoes aparecerem como sidebar*/
+                    .navigation{
+                     position: absolute;
+                     flex-direction: column;
+                     top: 0;
+                     background-color: var(--color-dark5);
+                     height: 100%;
+                     width: 35vw;
+                     padding: 16px;
+                     animation-duration: 1s;
+                     margin-left: -100vw;
+                    }
+                }  
+                /*formatando como transiçao*/
+               @keyframes showSidebar {
+                 from{margin-left: -100vw;}
+                 top {margin-left: -10vw;}
+               }
+
+               /* Estilizando o rodape*/
+
+               footer{
+                text-align: center;
+                padding: 5px;
+                color: var(--color-white);
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 18px;
+               }
+
+               .pe{
+                text-decoration: none;
+                color: var(--color-purple);
+               }
+
+              
+
+        </style>
+    </head>
+    <body>
+          <div class="header" id="header">
+            <button onclick="toggleSidebar()" class="btn_icon_header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+            </button>
+             <div class="logo_header">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqcnq3xf4RpLGolebvTaw_F3nKNOW3kGqNrA&usqp=CAU" alt="logo" title="logo"/>
+             </div>
+             <div class="navigation" id="navigation">
+                <button onclick="toggleSidebar()" class="btn_icon_header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                </button>
+               <a href="#" class="ativo">Home</a>
+               <a href="#" class="ativo">Cursos</a>
+               <a href="#" class="ativo">Sobre</a>
+               <a href="#" class="ativo">Contato</a>
+             </div>
+          </div>
+          
+                <div tabindex="0" onclick="closeSidebar()" class="content" >
+                
+                <form>
+                    <div id="content">
+                        <h1> Seja Bem vindo!</h1>
+                    <div>
+                        <input type="text" class="inputs" placeholder="Digite seu nome">
+                        <span class="legend">Minimo 3 caracteres</span>
+                    </div>
+                    <div>
+                        <input type="email" class="inputs" placeholder="digite seu email">
+                        <span class="legend">Digite um email valido</span> 
+                    </div>
+                    <div>
+                        <input type="password"  class="inputs" placeholder="repita sua senha">
+                        <span class="legend">Minimo 8 caracteres</span>               
+                    </div>
+                    <div>
+                        <input type="password"  class="inputs" placeholder="digite sua senha">
+                        <span class="legend">Minimo 8 caracteres</span>               
+                    </div>
+                    <textarea  class="inputs" name="descriçao" id="descriçao" cols="30" rows="10" placeholder="Fale um pouco sobre voce..."></textarea>
+                     <p>Sexo:</p>
+                    <div class="box">
+                       
+                       <div>
+                        <input type="radio" name="sexo" id="m" value="m"> 
+                         <label for="m">masculino</label>   
+                      </div>
+
+                       <div>
+                        <input type="radio" name="sexo" id="f" value="f"> 
+                        <label for="f">feminino</label>
+                    </div>
+
+                        <div>
+                            <input type="radio" name="sexo" id="o" value="o"> 
+                            <label for="o">outros</label>
+                        </div>
+                    </div>
+                    <p>Quais suas experiencias?</p>
+                    <div class="box">
+                    <div>
+                     <input type="checkbox" name="html" id="html">
+                     <label for="html">HTML</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="CSS" id="css">
+                        <label for="css">CSS</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="Javascript" id="Javascript">
+                        <label for="Javascript">Javascript</label>
+                    </div>
+                    <input type="checkbox" name="php" id="php">
+                    <label for="php">PHP</label>
+                    </div>
+                    <button type="submit" >Enviar</button>
+
+                        
+                    
+                </form>
+            </div>
+            </div>
+            <footer>
+                Siga-me em meu Github  <a class="pe"  href="https://github.com/oliveira-andriely">@AndrielyOliveira</a>
+            </footer>
+    </body>
+    <script>
+        var header = document.getElementById('header');
+        var navigation = document.getElementById('navigation');
+        var content = document.getElementById('content');
+        var showSidebar = false;
+
+        function toggleSidebar()
+        {
+            showSidebar = !showSidebar;
+            if(showSidebar)
+            {  
+                navigation.style.marginLeft = '-10vw';
+                navigation.style.animationName = 'showSidebar';
+                content.style.filter = 'blur(2px)';
+
+            }
+            else
+            {
+                navigation.style.marginLeft = '-100vw';
+                navigation.style.animationName = '';
+                content.style.filter = ''
+
+            }
+        }
+
+        function closeSidebar() 
+        {
+            if(showSidebar)
+            {
+                toggleSidebar();
+            }
+        }
+
+        window.addEventListener('resize', function(event) {
+            if(window.innerWidth > 768 && showSidebar)  
+            {
+                toggleSidebar();
+            }
+        });
+    </script>
+</html>
